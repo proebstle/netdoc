@@ -798,6 +798,8 @@ def normalize_interface_status(status):
         return False
     if "false" in status:
         return False
+    if "ukn" in status:
+        return False
     if "disabled" in status:
         return False
     raise ValueError(f"Invalid interface status {status}")
